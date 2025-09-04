@@ -8,12 +8,12 @@ import { staggerContainer, speechBubbleVariants } from '@/lib/framer';
 
 export function EducationPanel() {
   return (
-    <div className="w-full h-full flex items-center justify-center p-8 relative">
+    <div className="w-full h-full flex items-center justify-center p-4 sm:p-6 md:p-8 relative">
       {/* Background decorative elements */}
       <div className="absolute top-16 left-16 w-28 h-28 bg-retro-yellow/20 rounded-full blur-xl" />
       <div className="absolute bottom-16 right-16 w-32 h-32 bg-retro-blue/20 rounded-full blur-xl" />
       <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-retro-red/20 rounded-full blur-xl" />
-      
+
       <motion.div
         className="max-w-5xl mx-auto w-full"
         variants={staggerContainer}
@@ -25,11 +25,11 @@ export function EducationPanel() {
           className="text-center mb-12"
           variants={speechBubbleVariants}
         >
-          <h2 className="font-comic text-5xl lg:text-6xl text-ink mb-4">
+          <h2 className="font-comic text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-ink mb-4">
             Education Journey
           </h2>
           <div className="w-32 h-1 bg-retro-blue mx-auto rounded-full mb-4" />
-          <p className="font-retro text-lg text-ink/80 max-w-2xl mx-auto">
+          <p className="font-retro text-base sm:text-lg text-ink/80 max-w-2xl mx-auto">
             My academic path and continuous learning adventure
           </p>
         </motion.div>

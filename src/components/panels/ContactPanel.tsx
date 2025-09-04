@@ -51,12 +51,12 @@ export function ContactPanel() {
   };
 
   return (
-    <div className="w-full h-full flex items-center justify-center p-8 relative">
+    <div className="w-full h-full flex items-center justify-center p-4 sm:p-6 md:p-8 relative">
       {/* Background decorative elements */}
       <div className="absolute top-16 left-16 w-32 h-32 bg-retro-blue/20 rounded-full blur-xl" />
       <div className="absolute bottom-16 right-16 w-24 h-24 bg-retro-red/20 rounded-full blur-xl" />
       <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-retro-yellow/20 rounded-full blur-xl" />
-      
+
       <motion.div
         className="max-w-6xl mx-auto w-full"
         variants={staggerContainer}
@@ -68,16 +68,16 @@ export function ContactPanel() {
           className="text-center mb-12"
           variants={speechBubbleVariants}
         >
-          <h2 className="font-comic text-5xl lg:text-6xl text-ink mb-4">
+          <h2 className="font-comic text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-ink mb-4">
             Let&apos;s Connect!
           </h2>
           <div className="w-32 h-1 bg-retro-red mx-auto rounded-full mb-4" />
-          <p className="font-retro text-lg text-ink/80 max-w-2xl mx-auto">
+          <p className="font-retro text-base sm:text-lg text-ink/80 max-w-2xl mx-auto">
             Ready to collaborate? Send me a message and let&apos;s create something amazing together!
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Form */}
           <motion.div
             className="bg-white/90 comic-border comic-shadow-lg rounded-2xl p-8"

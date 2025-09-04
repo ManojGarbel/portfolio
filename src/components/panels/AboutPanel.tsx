@@ -16,7 +16,7 @@ export function AboutPanel() {
   ];
 
   return (
-    <div className="w-full h-full flex items-center justify-center p-8 relative">
+    <div className="w-full h-full flex items-center justify-center p-4 sm:p-6 md:p-8 relative">
       {/* Background decorative elements */}
       <div className="absolute top-16 left-16 w-24 h-24 bg-retro-blue/20 rounded-full blur-xl" />
       <div className="absolute bottom-16 right-16 w-32 h-32 bg-retro-yellow/20 rounded-full blur-xl" />
@@ -32,14 +32,14 @@ export function AboutPanel() {
           className="text-center mb-12"
           variants={speechBubbleVariants}
         >
-          <h2 className="font-comic text-5xl lg:text-6xl text-ink mb-4">
+          <h2 className="font-comic text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-ink mb-4">
             About Me
           </h2>
           <div className="w-24 h-1 bg-retro-red mx-auto rounded-full" />
         </motion.div>
 
         {/* Main content grid */}
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Bio section */}
           <motion.div
             className="space-y-6"

@@ -81,8 +81,8 @@ export function PageBook({ currentChapter }: PageBookProps) {
   }
 
   return (
-    <div className="w-full h-screen flex items-center justify-center relative">
-      {/* Book container with perspective */}
+    <div className="w-full min-h-[600px] lg:h-screen flex items-center justify-center relative px-4 sm:px-6 md:px-8">
+      {/* Book container with perspective */} 
       <div className="relative w-full max-w-6xl h-full max-h-[800px] perspective-1000">
         {/* Current page */}
         <div className="absolute inset-0 z-10">

@@ -8,7 +8,7 @@ import { actionBurstVariants, speechBubbleVariants } from '@/lib/framer';
 
 export function HeroPanel() {
   return (
-    <div className="w-full h-full flex items-center justify-center p-8 relative">
+    <div className="w-full h-full flex items-center justify-center p-4 sm:p-6 md:p-8 relative">
       {/* Background decorative elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-retro-yellow/20 rounded-full blur-xl" />
       <div className="absolute bottom-20 right-20 w-32 h-32 bg-retro-red/20 rounded-full blur-xl" />
@@ -22,11 +22,11 @@ export function HeroPanel() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h1 className="font-comic text-6xl lg:text-8xl text-ink mb-4 leading-tight">
+          <h1 className="font-comic text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-ink mb-4 leading-tight">
             {PERSONAL_INFO.name}
           </h1>
           <motion.div
-            className="font-comic-alt text-2xl lg:text-3xl text-retro-red mb-6"
+            className="font-comic-alt text-xl sm:text-2xl lg:text-3xl text-retro-red mb-6"
             variants={actionBurstVariants}
             initial="idle"
             animate="burst"
@@ -34,7 +34,7 @@ export function HeroPanel() {
           >
             {PERSONAL_INFO.title}
           </motion.div>
-          <p className="font-retro text-lg lg:text-xl text-ink/80 max-w-2xl mx-auto">
+          <p className="font-retro text-base sm:text-lg lg:text-xl text-ink/80 max-w-2xl mx-auto">
             {PERSONAL_INFO.tagline}
           </p>
         </motion.div>
