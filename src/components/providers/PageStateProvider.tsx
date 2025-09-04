@@ -34,11 +34,23 @@ interface PageStateProviderProps {
   children: ReactNode;
 }
 
-export function PageStateProvider({ children }: PageStateProviderProps) {
-  const [currentChapter, setCurrentChapter] = useState<Chapter>(Chapter.COVER);
+interface PageStateProviderProps {
+  children: React.ReactNode;
+  initialChapter?: Chapter;
+}
+
+export function PageStateProvider({ children, initialChapter }: PageStateProviderProps) {
+  const [currentChapter, setCurrentChapter] = useState<Chapter>(initialChapter ?? Chapter.COVER);
   const [isFlipping, setIsFlipping] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(false);
+
+  // Sync currentChapter with initialChapter prop changes
+  useEffect(() => {
+    if (initialChapter !== undefined && initialChapter !== currentChapter) {
+      setCurrentChapter(initialChapter);
+    }
+  }, [initialChapter]);
 
   // Check for reduced motion preference on mount
   useEffect(() => {
