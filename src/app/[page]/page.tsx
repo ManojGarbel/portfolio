@@ -61,7 +61,7 @@ export default function ChapterPage({ params }: PageProps) {
       </div>
       
       {/* Chapter tabs for desktop */}
-      <div className="hidden lg:block fixed right-4 top-1/2 transform -translate-y-1/2 z-40 space-y-2">
+      <div className="hidden lg:flex fixed right-4 top-1/2 transform -translate-y-1/2 z-40 space-y-2 flex-col">
         {Array.from({ length: 8 }, (_, i) => (
           <div
             key={i}
