@@ -39,17 +39,18 @@ export default function ChapterPage({ params }: PageProps) {
       
       {/* Main content */}
       <div className="relative z-10">
-        <NavBar currentChapter={pageId} />
-        
-        <main className="page-container">
-          <PageBook currentChapter={pageId} />
-        </main>
-        
-        <Pager currentChapter={pageId} />
+        <PageStateProvider initialChapter={pageId}>
+          <NavBar currentChapter={pageId} />
+          
+          <main className="page-container">
+            <PageBook currentChapter={pageId} />
+          </main>
+          
+          <Pager currentChapter={pageId} />
+          
+          <GestureLayer />
+        </PageStateProvider>
       </div>
-      
-      {/* Gesture and keyboard handling */}
-      <GestureLayer />
       
       {/* Page numbers and progress indicator */}
       <div className="fixed bottom-4 right-4 z-50">
